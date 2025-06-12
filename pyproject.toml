@@ -1,0 +1,29 @@
+[project]
+name = "code-ramblings"
+version = "0.1.0"
+description = "Random collections of scripts written to test concepts or to explore limits of how to implement ML related systems."
+readme = "README.md"
+requires-python = ">=3.13.4"
+dependencies = [
+    "numpy>=2.3.0",
+    "pandas>=2.3.0",
+    "torch>=2.7.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "mypy>=1.16.0",
+    "pytest>=8.4.0",
+    "pytest-cov>=6.2.1",
+    "ruff>=0.11.13",
+]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+testpaths = ["tests", "libs"]
+addopts = [
+    "--cov=libs",
+    "--cov-report=term-missing",
+    "--doctest-modules"
+]
