@@ -1,6 +1,6 @@
 [project]
 name = "code-ramblings"
-version = "0.1.0"
+version = "0.0.1"
 description = "Random collections of scripts written to test concepts or to explore limits of how to implement ML related systems."
 readme = "README.md"
 requires-python = ">=3.13.5"
@@ -9,6 +9,10 @@ dependencies = [
     "pandas>=2.3.0",
     "torch>=2.7.1",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
@@ -21,9 +25,9 @@ dev = [
 
 [tool.pytest.ini_options]
 pythonpath = "."
-testpaths = ["tests", "libs"]
+testpaths = ["src"]
 addopts = [
-    "--cov=libs",
+    "--cov=src",
     "--cov-report=term-missing",
     "--doctest-modules"
 ]
