@@ -3,7 +3,7 @@ name = "code-ramblings"
 version = "0.1.0"
 description = "Random collections of scripts written to test concepts or to explore limits of how to implement ML related systems."
 readme = "README.md"
-requires-python = ">=3.13.4"
+requires-python = ">=3.13.5"
 dependencies = [
     "numpy>=2.3.0",
     "pandas>=2.3.0",
