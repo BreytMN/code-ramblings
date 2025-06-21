@@ -7,11 +7,14 @@ requires-python = ">=3.13.5"
 dependencies = [
     "altair>=5.5.0",
     "crepes>=0.8.0",
+    "fastapi>=0.115.13",
+    "jinja2>=3.1.6",
     "numpy>=2.3.1",
     "pandas>=2.3.0",
+    "pydantic>=2.11.7",
     "scikit-learn>=1.7.0",
     "scipy>=1.15.3",
-    "torch>=2.7.1",
+    "uvicorn[standard]>=0.34.3",
     "vega-datasets>=0.9.0",
     "vegafusion[embed]==1.6.9",
     "vl-convert-python>=1.8.0",
@@ -23,12 +26,15 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
+    "fastapi[all]>=0.115.13",
     "ipykernel>=6.29.5",
     "mypy>=1.16.1",
     "pre-commit>=4.2.0",
+    "pytailwindcss>=0.2.0",
     "pytest>=8.4.1",
     "pytest-cov>=6.2.1",
     "ruff>=0.12.0",
+    "torch>=2.7.1",
 ]
 
 [tool.pytest.ini_options]
