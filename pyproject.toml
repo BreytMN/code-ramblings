@@ -7,7 +7,7 @@ requires-python = ">=3.13.5"
 dependencies = [
     "altair>=5.5.0",
     "crepes>=0.8.0",
-    "numpy>=2.3.0",
+    "numpy>=2.3.1",
     "pandas>=2.3.0",
     "scikit-learn>=1.7.0",
     "scipy>=1.15.3",
@@ -33,9 +33,9 @@ dev = [
 
 [tool.pytest.ini_options]
 pythonpath = "."
-testpaths = ["src"]
+testpaths = ["src/code_ramblings"]
 addopts = [
-    "--cov=src",
+    "--cov=src/code_ramblings",
     "--cov-report=term-missing",
     "--doctest-modules"
 ]
