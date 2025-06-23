@@ -1,22 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "code-ramblings"
 version = "0.0.2"
 description = "Random collections of scripts written to test concepts or to explore limits of how to implement ML related systems."
 readme = "README.md"
 requires-python = ">=3.13.5"
+keywords = ["data-science", "machine-learning", "python"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
 dependencies = [
-    "altair>=5.5.0",
-    "crepes>=0.8.0",
-    "fastapi>=0.115.13",
-    "jinja2>=3.1.6",
     "numpy>=2.3.1",
     "pandas>=2.3.0",
-    "pydantic>=2.11.7",
-    "scikit-learn>=1.7.0",
-    "scipy>=1.15.3",
-    "uvicorn[standard]>=0.34.3",
-    "vegafusion[embed]==1.6.9",
-    "vl-convert-python>=1.8.0",
+    "scipy>=1.16.0",
 ]
 
 [project.optional-dependencies]
@@ -24,21 +32,25 @@ torch = [
     "torch>=2.7.1",
 ]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+[project.urls]
+Homepage = "https://code-ramblings.breytmn.com"
+Repository = "https://github.com/BreytMN/code-ramblings"
+Documentation = "https://github.com/BreytMN/code-ramblings#readme"
 
 [dependency-groups]
 dev = [
-    "fastapi[all]>=0.115.13",
     "ipykernel>=6.29.5",
     "mypy>=1.16.1",
     "pre-commit>=4.2.0",
-    "pytailwindcss>=0.2.0",
     "pytest>=8.4.1",
     "pytest-cov>=6.2.1",
     "ruff>=0.12.0",
+]
+notebooks = [
+    "altair>=5.5.0",
     "vega-datasets>=0.9.0",
+    "vegafusion[embed]==1.6.9",
+    "vl-convert-python>=1.8.0",
 ]
 
 [tool.pytest.ini_options]
