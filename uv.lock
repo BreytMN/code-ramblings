@@ -107,6 +107,7 @@ dev = [
 ]
 notebooks = [
     { name = "altair" },
+    { name = "ipykernel" },
     { name = "vega-datasets" },
     { name = "vegafusion", extra = ["embed"] },
     { name = "vl-convert-python" },
@@ -132,6 +133,7 @@ dev = [
 ]
 notebooks = [
     { name = "altair", specifier = ">=5.5.0" },
+    { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "vega-datasets", specifier = ">=0.9.0" },
     { name = "vegafusion", extras = ["embed"], specifier = "==1.6.9" },
     { name = "vl-convert-python", specifier = ">=1.8.0" },

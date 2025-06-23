@@ -48,6 +48,7 @@ dev = [
 ]
 notebooks = [
     "altair>=5.5.0",
+    "ipykernel>=6.29.5",
     "vega-datasets>=0.9.0",
     "vegafusion[embed]==1.6.9",
     "vl-convert-python>=1.8.0",

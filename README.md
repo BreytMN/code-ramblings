@@ -10,6 +10,7 @@ Random collections of scripts written to test concepts or to explore limits of h
     - [Installing as project](#installing-as-project)
       - [Assuming you have uv installed](#assuming-you-have-uv-installed)
       - [Running the tests](#running-the-tests)
+      - [Running the notebooks](#running-the-notebooks)
   - [Webpage](#webpage)
   - [Notebooks](#notebooks)
 
@@ -69,7 +70,16 @@ uv sync --extra torch --no-sources
 The pyproject.toml is already configured to run all tests correctly:
 
 ```bash
+uv sync --group dev
 pytest
+```
+
+#### Running the notebooks
+
+The notebooks come with extra dependencies for data viz. To install the notebook dependencies:
+
+```bash
+uv sync --group notebooks
 ```
 
 ## Webpage
