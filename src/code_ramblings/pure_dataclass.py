@@ -6,7 +6,7 @@ import pandas as pd  # type: ignore
 from numpy.typing import NDArray
 
 try:
-    import torch
+    import torch  # type: ignore
     from torch import Tensor
     from torch import dtype as torch_dtype
 
