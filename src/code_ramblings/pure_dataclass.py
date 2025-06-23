@@ -2,10 +2,22 @@ from dataclasses import dataclass
 from typing import Literal, Self
 
 import numpy as np
-import pandas as pd  # type: ignore  # type: ignore
-import torch
+import pandas as pd  # type: ignore
 from numpy.typing import NDArray
-from torch import Tensor
+
+try:
+    import torch
+    from torch import Tensor
+    from torch import dtype as torch_dtype
+
+except ImportError:  # pragma: no cover
+
+    class Tensor: ...  # type: ignore [no-redef]
+
+    class torch_dtype: ...  # type: ignore [no-redef]
+
+    torch = None  # type: ignore [assignment]
+
 
 SetType = Literal["train", "calib", "valid", "test"]
 
@@ -224,7 +236,7 @@ class DataContainer:
         )
 
     def as_torch_tensor(
-        self, dtype: torch.dtype | None = None
+        self, dtype: torch_dtype | None = None
     ) -> tuple[Tensor, Tensor]:
         """Convert feature and target data to PyTorch tensors.
 
@@ -255,6 +267,9 @@ class DataContainer:
             >>> y_f64.dtype
             torch.float64
         """
+        if torch is None:  # pragma: no cover
+            raise ImportError("PyTorch is not installed.")
+
         return (
             torch.tensor(self.x.to_numpy(), dtype=dtype),
             torch.tensor(self.y.to_numpy(), dtype=dtype),

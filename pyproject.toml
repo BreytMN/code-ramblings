@@ -1,6 +1,6 @@
 [project]
 name = "code-ramblings"
-version = "0.0.1"
+version = "0.0.2"
 description = "Random collections of scripts written to test concepts or to explore limits of how to implement ML related systems."
 readme = "README.md"
 requires-python = ">=3.13.5"
@@ -20,6 +20,11 @@ dependencies = [
     "vl-convert-python>=1.8.0",
 ]
 
+[project.optional-dependencies]
+torch = [
+    "torch>=2.7.1",
+]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -34,7 +39,6 @@ dev = [
     "pytest>=8.4.1",
     "pytest-cov>=6.2.1",
     "ruff>=0.12.0",
-    "torch>=2.7.1",
 ]
 
 [tool.pytest.ini_options]
@@ -45,3 +49,11 @@ addopts = [
     "--cov-report=term-missing",
     "--doctest-modules"
 ]
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
