@@ -2,21 +2,19 @@ from dataclasses import dataclass
 from typing import Literal, Self
 
 import numpy as np
-import pandas as pd  # type: ignore
+import pandas as pd  # type: ignore[import-untyped]
 from numpy.typing import NDArray
 
 try:
-    import torch  # type: ignore
+    import torch
     from torch import Tensor
     from torch import dtype as torch_dtype
 
 except ImportError:  # pragma: no cover
-
-    class Tensor: ...  # type: ignore [no-redef]
-
-    class torch_dtype: ...  # type: ignore [no-redef]
-
-    torch = None  # type: ignore [assignment]
+    # fmt: off
+    class Tensor: ...  # type: ignore[no-redef]
+    class torch_dtype: ...  # type: ignore[no-redef]
+    torch = None  # type: ignore[assignment]
 
 
 SetType = Literal["train", "calib", "valid", "test"]
