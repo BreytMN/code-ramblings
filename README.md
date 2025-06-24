@@ -89,4 +89,5 @@ Everything tested and analyzed here will eventually be displayed on [code-rambli
 ## Notebooks
 
 * [Mixture Models](./notebooks/MixtureModels.ipynb) ([web version](https://code-ramblings.breytmn.com/))
+* [No-Skill Classifier](./notebooks/NoSkillClassifier.ipynb)
 * ... coming soon
