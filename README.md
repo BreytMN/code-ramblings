@@ -3,6 +3,8 @@
 Random collections of scripts written to test concepts or to explore limits of how to implement ML related systems.
 
 - [Code Ramblings](#code-ramblings)
+  - [Webpage](#webpage)
+  - [Notebooks](#notebooks)
   - [Install](#install)
     - [Install as dependency](#install-as-dependency)
       - [With uv:](#with-uv)
@@ -11,9 +13,16 @@ Random collections of scripts written to test concepts or to explore limits of h
       - [Assuming you have uv installed](#assuming-you-have-uv-installed)
       - [Running the tests](#running-the-tests)
       - [Running the notebooks](#running-the-notebooks)
-  - [Webpage](#webpage)
-  - [Notebooks](#notebooks)
 
+## Webpage
+
+Everything tested and analyzed here will eventually be displayed on [code-ramblings](https://code-ramblings.breytmn.com/)
+
+## Notebooks
+
+* [Mixture Models](./notebooks/MixtureModels.ipynb) ([web version](https://code-ramblings.breytmn.com/mixture_models))
+* [No-Skill Classifier](./notebooks/NoSkillClassifier.ipynb) ([web version](https://code-ramblings.breytmn.com/no_skill_classifier))
+* ... coming soon
 
 ## Install
 
@@ -81,13 +90,3 @@ The notebooks come with extra dependencies for data viz. To install the notebook
 ```bash
 uv sync --group notebooks
 ```
-
-## Webpage
-
-Everything tested and analyzed here will eventually be displayed on [code-ramblings](https://code-ramblings.breytmn.com/)
-
-## Notebooks
-
-* [Mixture Models](./notebooks/MixtureModels.ipynb) ([web version](https://code-ramblings.breytmn.com/))
-* [No-Skill Classifier](./notebooks/NoSkillClassifier.ipynb)
-* ... coming soon
