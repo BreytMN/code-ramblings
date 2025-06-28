@@ -49,7 +49,7 @@ class PoissonDistribution(CountDistribution[PoissonParams]):
         self.params = PoissonParams(lambda_=lambda_)
 
     def __repr__(self) -> str:
-        return f"PoissonDistribution(lambda_={self.params.lambda_})"
+        return f"PoissonDistribution(lambda_={round(self.params.lambda_, 2)})"
 
     @property
     def lambda_(self) -> float:

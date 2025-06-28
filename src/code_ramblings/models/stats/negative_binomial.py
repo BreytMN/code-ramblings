@@ -54,7 +54,7 @@ class NegativeBinomialDistribution(CountDistribution[NegativeBinomialParams]):
         self.params = NegativeBinomialParams(r=float(r), p=float(p))
 
     def __repr__(self) -> str:
-        return f"NegativeBinomialDistribution(r={self.params.r}, p={self.params.p})"
+        return f"NegativeBinomialDistribution(r={round(self.params.r, 2)}, p={round(self.params.p, 2)})"
 
     @property
     def p(self) -> float:

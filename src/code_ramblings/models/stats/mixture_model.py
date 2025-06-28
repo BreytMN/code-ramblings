@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import numpy as np
 from numpy.typing import NDArray
 
-from .stats._generics import CountDistribution, CountParams
+from ._generics import CountDistribution, CountParams
 
 __all__ = ["CountMixtureModel"]
 
@@ -107,7 +107,7 @@ class CountMixtureModel:
 
     def __repr__(self) -> str:
         return (
-            "Mixture Model(\n"
+            "MixtureModel(\n"
             f"    {self.distribution1.__repr__()},\n"
             f"    {self.distribution2.__repr__()}\n"
             ")"
