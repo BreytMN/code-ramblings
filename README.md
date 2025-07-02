@@ -20,8 +20,9 @@ Everything tested and analyzed here will eventually be displayed on [code-rambli
 
 ## Notebooks
 
+* [Mixed Model](./notebooks/MixedModel.ipynb)
 * [Mixture Models](./notebooks/MixtureModels.ipynb) ([web version](https://code-ramblings.breytmn.com/mixture_models))
-* [No-Skill Classifier](./notebooks/NoSkillClassifier.ipynb) ([web version](https://code-ramblings.breytmn.com/no_skill_classifier))
+* [No-Skill Classifier](./notebooks/NoSkillClassifier.ipynb)
 * ... coming soon
 
 ## Install
